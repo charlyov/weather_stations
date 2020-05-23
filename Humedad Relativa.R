@@ -6,12 +6,18 @@
 eo=function(T){0.6108*exp((17.27*T)/(T+237.3))} # Presión de saturación de vapor
 hr= function(tmin,tmed){eo(tmin)*100/eo(tmed)} # Humedad Relativa (%) según Presión real de vapor
 
-hr(10.0 ,19.2) # Humedad relativa para día de incendios
-hr(10, mean(c(10,27.3))) # Humedad relativa para todas las estaciones (resúmenes diarios)
+hr(10.0 ,19.2) # Ejémplo de cálculo de Humedad relativa para día promedio
 
+# T = Temperatura
+# tmin = temperatura mínima
+# tmed = temperatura media
+# tmax = temperatura máxima
+
+# La versión en español contiene una corrección a la temperatura por día, 
+# la fórmula que se presenta aquí corresponde con esa versión actualizada
 
 ### términos en inglés ###
-# Relative humidity
+# Relative humidity = Humedad Relativa
 # Steam saturation pressure = Presión de saturación de vapor
 # dew temperature = temperatura de rocío
 # Actual steam pressure = Presión real de vapor
